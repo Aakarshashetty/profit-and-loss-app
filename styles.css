@@ -1,9 +1,54 @@
 body{
     text-align: center;
-    background-image: url("/img/background.jpg");
-    background-size: 100px 100px;
+    background: url("/img/background.jpg");
+    background-size: 1400px 657px;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 label{
     display: block;
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    /* margin: 10px 20px; */
+}
+input{
+    
+    padding: 0.5rem 0.5rem;
+    background: transparent;
+    border: 2px solid whitesmoke;
+    border-radius: 0.5rem;
+    color: white;
+    margin: 10px 10px;
+}
+input:focus{
+    border: 2px dotted whitesmoke;
+    outline: none;
+    
+}
+.tell-me-btn{
+    background: transparent;
+    padding: 0.5rem 1rem;
+    border: 2px solid whitesmoke;
+    border-radius: 0.5rem;
+    color: whitesmoke;
+    font-size: 15px;
+    margin: 20px 10px;
+    cursor: pointer;
+}
+.tell-me-btn:hover{
+    /* background-color: dimgrey; */
+    margin: 22px 12px;
+    /* display: block; */
+}
+.output{
+    text-align: center;
+    font-size: 19px;
+    font-weight: bolder;
+    margin: 50px 10px;
+    display: none;
+    background-color: whitesmoke;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+   
 }
