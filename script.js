@@ -4,21 +4,31 @@ const currPrice = document.querySelector('.curr-price');
 const tellMe = document.querySelector('.tell-me-btn');
 const output = document.querySelector('.output');
 
-const calculateProfitOrLoss = (sellingPrice, costPrice, stock) => {
-    if(sellingPrice > costPrice){
-        const profit = (sellingPrice-costPrice) * stock;
-        const percentage = (profit/costPrice)*100;
-        output.innerText = `Hey, the profit is ${profit}Fixed(2) and the percent is ${percentage}`;
+const calculateProfitOrLoss = (initial, current, stock) => {
+    if(initial < current){
+        const profit = (current-initial) * stock;
+        const percentage = (profit/initial)*100;
+        output.style.color = "green";
+        output.innerText = `Hey, the profit is ${profit} and the percent is ${percentage.toFixed(2)}%`;
     }
-    else if(costPrice > sellingPrice){
-        const loss = (costPrice - sellingPrice)*stock;
-        const percentage = (loss/costPrice)*100;
-        output.innerText = `Hey, the loss is ${loss} and the percent is ${percentage}%`;
+    else if(initial > current){
+        const loss = (initial - current)*stock;
+        const percentage = (loss/initial)*100;
+        output.style.color = "red";
+        output.innerText = `Hey, the loss is ${loss} and the percent is ${percentage.toFixed(2)}%`;
+    }
+    else{
+        output.innerText = "No pain no gain, and no gain no pain🙂";
     }
 }
 tellMe.addEventListener("click", ()=>{
-    var sp = Number(initialPrice.value);
-    var cp = Number(currPrice.value);
-    var st = Number(stocks.value);
-    calculateProfitOrLoss(sp,cp,st);
+    var ip = initialPrice.value;
+    var cp = currPrice.value;
+    var st = stocks.value;
+    if(ip && cp && st !== ''){
+        calculateProfitOrLoss(ip,cp,st);
+    }
+    else{
+        output.innerText = "Please fill out all the fields😐"
+    }
 });

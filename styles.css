@@ -1,0 +1,9 @@
+body{
+    text-align: center;
+    background-image: url("/img/background.jpg");
+    background-size: 100px 100px;
+}
+label{
+    display: block;
+    padding: 0.5rem;
+}
