@@ -3,6 +3,7 @@ body{
     background: url("/img/background.jpg");
     background-size: 1400px 657px;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: white;
     font-size: 17px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -51,4 +52,32 @@ input:focus{
     padding: 0.5rem 1rem;
     border-radius: 1rem;
    
+}
+.footer{
+    padding: 1rem 1rem;
+    color: whitesmoke;
+    text-align: center;
+    margin: 150px 20px;
+    margin-bottom: 0px;
+}
+.footer .link{
+    color: whitesmoke;
+    margin: 5px 5px;
+    border: 1.5px solid whitesmoke;
+    border-radius: 10rem;
+    padding: 0.5rem 0.5rem;
+}
+.footer ul{
+    padding-inline-start: 0px;
+}
+.footer-insider{
+    font-weight: bold;
+    font-size: 19px;
+    padding-bottom: 1rem;
+    margin: 0px 0px;
+    margin-left: 10px;
+}
+.footer .link:hover{
+    background-color: whitesmoke;
+    color: black;
 }
